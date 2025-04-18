@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="w-screen h-screen flex justify-center items-center">
+        <div class="p-5 flex flex-col gap-6 shadow-xl shadow-gray-600">
+            <div class="flex flex-col gap-2">
+                <h1>Recient Emails</h1>
+                <textarea class="outline-0 focus:border-sky-500 bg-gray-100 border px-2 py-1" placeholder="Enter Emails" rows="4" cols="50"></textarea>
+            </div>
+            <div class="flex flex-col gap-2">
+                <h1>Subject</h1>
+                <textarea class="outline-0 focus:border-sky-500 bg-gray-100 border px-2 py-1" placeholder="Enter Subject" rows="4" cols="50"></textarea>
+            </div>
+            <div class="flex flex-col gap-2">
+                <h1>Description</h1>
+                <textarea class="outline-0 focus:border-sky-500 bg-gray-100 border px-2 py-1" placeholder="Enter Description" rows="4" cols="50"></textarea>
+            </div>
+            <Button onclick="submitClick()" class="bg-rose-500 duration-300 outline-0 text-white font-semibold hover:bg-rose-700 py-1">Submit</Button>
+            <script>
+                const submitClick =()=>{
+                    alert("Submit Button Clicked")
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

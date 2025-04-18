@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body>
+    <div class="w-screen bg-black h-screen">
+
+        <!-- Navigation Bar -->
+        <div id="navigation-bar"
+            class="md:px-14 px-8 h-14 fixed w-full items-center border border-gray-700 border-dashed bg-black opacity-90 flex justify-between">
+            <div class="md:flex hidden items-center gap-8">
+                <h1 class="text-gray-200 text-lg font-bold">Logo</h1>
+                <p class="text-gray-200 cursor-pointer hover:text-white text-sm">Docs</p>
+                <p class="text-gray-200 cursor-pointer hover:text-white text-sm">Components</p>
+                <p class="text-gray-200 cursor-pointer hover:text-white text-sm">Blocks</p>
+                <p class="text-gray-200 cursor-pointer hover:text-white text-sm">Charts</p>
+                <p class="text-gray-200 cursor-pointer hover:text-white text-sm">Themes</p>
+                <p onclick="clicked()" class="text-gray-200 cursor-pointer hover:text-white text-sm">Colors</p>
+            </div>
+
+            <!-- md: Three Line (menu option) -->
+            <div class="">
+                <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor"
+                    class=" md:hidden  size-6 hover:bg-gray-800 font-bold w-8 p-1 h-8 cursor-pointer rounded-xl text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+
+            <div class="flex gap-6 items-center">
+                <input
+                    class="bg-gray-900 text-gray-300 outline-none border border-gray-600 rounded-md py-0.5 px-2 w-60 md:w-96"
+                    type="text" placeholder="Search Document">
+                <svg id="modechange-button" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor"
+                    class="hover:bg-gray-500 p-1 rounded-lg w-7 cursor-pointer h-7 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+            </div>
+
+            <!-- Sidebar items (same as left sidebar) -->
+            <div id="mobile-sidebar"
+                class="fixed left-0 hidden top-0 w-full h-screen bg-transparent flex-col md:hidden">
+                <div class="bg-black px-7 pt-10 h-full flex-col flex gap-1 overflow-scroll">
+                    <div class="flex justify-between items-center ">
+                        <h1 class="text-white text-lg font-semibold px-2">Gatting Start</h1>
+                        <svg id="menu-closed" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor"
+                            class="size-6 hover:bg-gray-800 font-bold w-8 p-1 h-8 cursor-pointer rounded-xl text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+
+                    </div>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Introduction</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Installation</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">components.json</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Theming</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Dark mode</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">CLI</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Monorepo</p>
+                    <div class="flex gap-3 text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">
+                        Tailwind
+                        v4 <span class="text-gray-300 px-1 rounded-lg bg-rose-500 ">New</span></div>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Next.js 15 + React
+                        19
+                    </p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Typography</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Open in v0</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Blocks</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Figma</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Changelog</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Installation</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Next.js</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Vite</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Laravel</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">React Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Remix</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Astro</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Start</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                    <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="w-full h-screen bg-white fixed"></div> -->
+
+        <!-- Body -->
+
+        <div class="flex bg-black w-full pt-14">
+
+            <!-- Left -->
+
+            <div
+                class="w-[20%] px-7 pt-10 h-screen border hidden flex-col overflow-scroll md:flex gap-1 border-r-0 border-t-0 border-dashed border-gray-700">
+                <h1 class="text-white text-lg font-semibold px-2">Gatting Start</h1>
+                <p onclick="sideIntroduction()"
+                    class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Introduction</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Installation</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">components.json</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Theming</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Dark mode</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">CLI</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Monorepo</p>
+                <div class="flex gap-3 text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tailwind
+                    v4 <span class="text-gray-300 px-1 rounded-lg bg-rose-500 ">New</span></div>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Next.js 15 + React 19
+                </p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Typography</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Open in v0</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Blocks</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Figma</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Changelog</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Installation</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Next.js</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Vite</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Laravel</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">React Router</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Remix</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Astro</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Start</p>
+                <p class="text-gray-300 hover:bg-gray-800 px-2 rounded-lg py-1  cursor-pointer ">Tanstack Router</p>
+            </div>
+
+            <script>
+                const introBottom = document.getElementById('introduction-Bottom')
+                const sideIntroduction=()=>{
+                    introBottom.innerHTML = ` ` 
+                    
+                }
+            </script>
+
+            <!-- Bottom -->
+
+            <div
+                class="md:w-[55%] w-[75%] flex justify-center pt-10 border border-gray-700 border-t-0 border-dashed min-h-full ">
+                <div id="introduction-Bottom" class="w-[80%] flex flex-col gap-5">
+                    <h1 class="text-gray-400 flex gap-4">Docs <p class="text-gray-200">></p>
+                        <p class="text-white ">Introduction</p>
+                    </h1>
+
+                    <!-- Introduction -->
+                    <div class="flex flex-col gap-2">
+                        <h1 class="text-white text-2xl font-bold ">Introduction</h1>
+                        <p class="text-gray-400">shadcn/ui is a set of beautifully-designed, accessible components and a
+                            code
+                            distribution platform. Works with your favorite frameworks and AI models. Open Source. Open
+                            Code.
+                        </p>
+                        <p class="text-gray-200">This is not a component library. It is how you build your component
+                            library.</p>
+                        <p class="text-gray-400">You know how most traditional component libraries work: you install a
+                            package from NPM, import the components, and use them in your app.</p>
+                        <p class="text-gray-400">This approach works well until you need to customize a component to fit
+                            your design system or require one that isn’t included in the library. <span
+                                class="text-gray-200">Often, you end up wrapping library components, writing workarounds
+                                to override styles, or mixing components from different libraries with incompatible
+                                APIs. </span></p>
+                        <p class="text-gray-400">This is what shadcn/ui aims to solve. It is built around the following
+                            principles: </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Right -->
+
+            <div
+                class="w-[25%]  px-8 pt-10 flex flex-col gap-5 min-h-screen border border-l-0 border-t-0 border-dashed border-gray-700 ">
+                <div class="">
+                    <h1 class="text-white text-sm">On This Page</h1>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p
+                        class="text-gray-500 hover:text-white focus:text-white duration-200 w-fit cursor-pointer text-sm">
+                        Open Code</p>
+                    <p
+                        class="text-gray-500 hover:text-white focus:text-white duration-200 w-fit cursor-pointer text-sm">
+                        Composition</p>
+                    <p
+                        class="text-gray-500 hover:text-white focus:text-white duration-200 w-fit cursor-pointer text-sm">
+                        Distribution</p>
+                    <p
+                        class="text-gray-500 hover:text-white focus:text-white duration-200 w-fit cursor-pointer text-sm">
+                        Beautiful Defaults</p>
+                    <p
+                        class="text-gray-500 hover:text-white focus:text-white duration-200 w-fit cursor-pointer text-sm">
+                        AI-Ready</p>
+                </div>
+                <div class="border border-gray-700 md:flex hidden flex-col gap-3 w-64 pl-4 py-4 rounded-lg">
+                    <h1 class="text-white font-bold text-lg">Deploy your shadcn/ui <br>app on Vercel</h1>
+                    <p class="text-white text-sm">Trusted by OpenAI, Sonos, <br>Chick-fil-A, and more.</p>
+                    <p class="text-white text-sm">Vercel provides tools and <br>infrastructure to deploy apps <br>and
+                        features at scale.</p>
+                    <button class="cursor-pointer bg-white w-fit px-3 py-1 rounded-lg text-sm">Deploy Now</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom -->
+
+        <div class="bg-black px-8 border border-gray-700 border-dashed border-t-0 py-4">
+            <h1 class="text-gray-400 text-sm">Built by Mai_Hu_Harsh. The source code is available on GitHub.</h1>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
